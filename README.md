@@ -26,10 +26,6 @@ This is a test MCP (Model Context Protocol) project that provides a set of tools
                                  .             .
                                   .           .
                                       .....
-```
-
-
-
 ## Motivation
 
 This project aims to create a centralized platform for managing and executing various tasks related to software development, with a particular focus on AI-related workflows. By leveraging the Model Context Protocol (MCP), we can create a flexible and extensible system that allows developers to easily integrate and utilize different tools and services.
@@ -54,33 +50,36 @@ The project is organized as follows:
 ## Available Tools
 
 *   **generate_code:** A tool that generates boilerplate code for common tasks.
-    *   Arguments: `code_type`, `name`, `language` (optional, defaults to "python")
+    *   Arguments: `code_type`, `name`, `language` (optional, defaults to "python"), `description` (optional)
     *   Output: The generated code.
 *   **debug_code:** A tool that allows users to simulate debugging code.
-    *   Arguments: `code`, `breakpoints`
+    *   Arguments: `code`, `breakpoints` (optional, defaults to empty list)
     *   Output: `Debugging started (simulated).`
 *   **analyze_code:** A tool that performs static analysis to identify potential errors and code quality issues.
     *   Arguments: `code`
     *   Output: A dictionary containing lists of errors and warnings.
 *   **version_control:** A tool that interacts with Git to perform common version control operations.
-    *   Arguments: `command`
+    *   Arguments: `command`, `repo_path` (optional, defaults to current directory)
     *   Output: The output of the Git command.
 *   **task_management:** A tool that allows users to create and manage tasks.
     *   **create_task:** Creates a new task.
-        *   Arguments: `name`, `description`
+        *   Arguments: `name`, `description`, `priority` (optional, defaults to "medium")
         *   Output: `Task created`
     *   **list_tasks:** Lists all tasks.
         *   Arguments: None
-        *   Output: A list of tasks with their names, descriptions, and statuses.
+        *   Output: A list of tasks with their names, descriptions, priorities, and statuses.
     *   **update_task_status:** Updates the status of a task.
         *   Arguments: `name`, `status`
         *   Output: `Task status updated`
+    *   **delete_task:** Deletes a task.
+         *   Arguments: `name`
+         *   Output: `Task deleted`
 *   **memory_tool:** A tool that uses the memory MCP server to store and retrieve information.
     *   **add:** Adds a new observation to the entity.
-        *   Arguments: `action`, `entity_name`, `content`
+        *   Arguments: `action`, `entity_name`, `content`, `entity_type` (optional)
         *   Output: The response from the memory MCP server.
     *   **get:** Searches for the entity and returns its observations.
-         *   Arguments: `action`, `entity_name`, `entity_type` (optional), `keywords` (optional)
+         *   Arguments: `action`, `entity_name`, `entity_type` (optional), `keywords` (optional), `limit` (optional, defaults to 5)
          *   Output: The response from the memory MCP server.
 *   **sequential_thinking_tool:** A tool that uses the sequential thinking MCP server to help with complex tasks.
     *   Arguments: `thought`, `nextThoughtNeeded`, `thoughtNumber`, `totalThoughts`, `isRevision`, `revisesThought`, `branchFromThought`, `branchId`, `needsMoreThoughts`
@@ -107,6 +106,12 @@ The project is organized as follows:
     *   **list_directory:** Lists the contents of the specified directory.
         *   Arguments: `path`
         *   Output: A comma-separated list of the files and directories in the specified directory.
+    *   **file_exists:** Checks if a file exists.
+        *   Arguments: `path`
+        *   Output: `True` if the file exists, `False` otherwise.
+    *   **directory_exists:** Checks if a directory exists.
+        *   Arguments: `path`
+        *   Output: `True` if the directory exists, `False` otherwise.
 
 ## Usage
 
@@ -121,48 +126,3 @@ To use the tools, send a JSON request to the MCP server with the following forma
     }
 }
 ```
-
-Replace `tool_name` with the name of the tool you want to use, and replace `arg1` and `arg2` with the arguments required by the tool.
-
-## Example
-
-To use the `generate_code` tool, send the following request:
-
-```json
-{
-    "tool_name": "generate_code",
-    "arguments": {
-        "code_type": "class",
-        "name": "MyClass",
-        "language": "python"
-    }
-}
-```
-
-## Installation
-
-To install the project, follow these steps:
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/uncoder-cloud/beyond-mcp.git
-    ```
-2.  Change to the project directory:
-    ```bash
-    cd beyond-mcp
-    ```
-3.  Install the project and its dependencies:
-    ```bash
-    pip install -e .
-    ```
-This will install the project in editable mode, allowing you to make changes to the code and have them reflected immediately.
-
-## Contributing
-
-We welcome contributions to this project! Please follow these guidelines:
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Write clear and concise code with appropriate comments.
-4.  Add unit tests to verify your changes.
-5.  Submit a pull request with a detailed description of your changes.
