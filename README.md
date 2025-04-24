@@ -2,7 +2,7 @@
 
 **Warning: This project is currently under development and may not be stable.**
 
-This project, beyond-mcp, is a cutting-edge development platform leveraging the Model Context Protocol (MCP) to supercharge programmer productivity, especially in the rapidly evolving field of Artificial Intelligence. It provides a centralized hub for managing and executing a diverse range of development tasks, streamlining workflows and fostering seamless integration of various tools and services.
+This project, beyond-mcp, leverages the Model Context Protocol (MCP) to enhance programmer productivity, especially in Artificial Intelligence. It provides a centralized hub for managing and executing development tasks, streamlining workflows, and integrating various tools and services.
 
 ## Logo
 
@@ -10,42 +10,38 @@ This project, beyond-mcp, is a cutting-edge development platform leveraging the 
 
 ## Motivation
 
-This project provides a development platform that leverages the Model Context Protocol (MCP) to enhance programmer productivity, especially in AI. It offers a centralized hub for managing and executing development tasks, streamlining workflows, and integrating various tools and services.
-
+This project enhances programmer productivity, especially in AI, by providing a centralized development platform using the Model Context Protocol (MCP).
 ## Code Structure
 
-The project is organized as follows:
-
-*   `mcp_server/mcp_server.py`: This is the main file that implements the MCP server. It handles loading tools, executing requests, and communicating with the MCP client.
-*   `mcp_server/tools/`: This directory contains the individual tools that can be used by the MCP server. Each tool is implemented as a separate Python module.
-*   `mcp_server/tools/analyze_code.py`: A tool that performs static analysis to identify potential errors and code quality issues.
-*   `mcp_server/tools/debug_code.py`: A tool that allows users to simulate debugging code.
-*   `mcp_server/tools/file_management.py`: A tool that allows users to create, read, write, and delete files and directories.
-*   `mcp_server/tools/generate_code.py`: A tool that generates boilerplate code for common tasks in various programming languages.
-*   `mcp_server/tools/memory_tool.py`: A tool that uses the memory MCP server to store and retrieve information.
-*   `mcp_server/tools/sequential_thinking_tool.py`: A tool that uses the sequential thinking MCP server to help with complex tasks.
-*   `mcp_server/tools/task_management.py`: A tool that allows users to create and manage tasks.
-*   `mcp_server/tools/test_tools.py`: A file containing unit tests for the tools.
-*   `request.json`: A sample JSON file that can be used to send requests to the MCP server.
-*   `setup.py`: A file used to package and distribute the project.
-*   `requirements.txt`: A file listing the project's dependencies.
-*   `README.md`: This file, which provides an overview of the project.
-
+*   `mcp_server/mcp_server.py`: Implements the MCP server, handling tool loading, request execution, and client communication.
+*   `mcp_server/tools/`: Contains individual tools as Python modules.
+*   `mcp_server/tools/analyze_code.py`: Tool for static code analysis.
+*   `mcp_server/tools/debug_code.py`: Tool for simulating code debugging.
+*   `mcp_server/tools/file_management.py`: Tool for file and directory operations.
+*   `mcp_server/tools/generate_code.py`: Tool for generating boilerplate code.
+*   `mcp_server/tools/memory_tool.py`: Tool using the memory MCP server.
+*   `mcp_server/tools/sequential_thinking_tool.py`: Tool using the sequential thinking MCP server.
+*   `mcp_server/tools/task_management.py`: Tool for creating and managing tasks.
+*   `mcp_server/tools/test_tools.py`: Unit tests for the tools.
+*   `request.json`: Sample JSON request file.
+*   `setup.py`: Packaging and distribution file.
+*   `requirements.txt`: Project dependencies list.
+*   `README.md`: Project overview.
 ## Available Tools
 
-*   **generate_code:** A tool that generates boilerplate code for common tasks.
+*   **generate_code:** Generates boilerplate code.
     *   Arguments: `code_type`, `name`, `language` (optional, defaults to "python")
     *   Output: The generated code.
-*   **debug_code:** A tool that allows users to simulate debugging code.
+*   **debug_code:** Simulates debugging code.
     *   Arguments: `code`, `breakpoints` (optional, defaults to empty list)
     *   Output: `Debugging started (simulated).`
-*   **analyze_code:** A tool that performs static analysis to identify potential errors and code quality issues.
+*   **analyze_code:** Performs static code analysis.
     *   Arguments: `code`
     *   Output: A dictionary containing lists of errors and warnings.
-*   **version_control:** A tool that interacts with Git to perform common version control operations.
+*   **version_control:** Interacts with Git.
     *   Arguments: `command`, `repo_path` (optional, defaults to current directory)
     *   Output: The output of the Git command.
-*   **task_management:** A tool that allows users to create and manage tasks.
+*   **task_management:** Manages tasks.
     *   **create_task:** Creates a new task.
         *   Arguments: `name`, `description`, `priority` (optional, defaults to "medium")
         *   Output: `Task created`
@@ -58,36 +54,36 @@ The project is organized as follows:
     *   **delete_task:** Deletes a task.
          *   Arguments: `name`
          *   Output: `Task deleted`
-*   **memory_tool:** A tool that uses the memory MCP server to store and retrieve information.
-    *   **add:** Adds a new observation to the entity.
+*   **memory_tool:** Uses the memory MCP server.
+    *   **add:** Adds a new observation.
         *   Arguments: `action`, `entity_name`, `content`, `entity_type` (optional)
         *   Output: The response from the memory MCP server.
-    *   **get:** Searches for the entity and returns its observations.
+    *   **get:** Searches for entities and returns observations.
          *   Arguments: `action`, `entity_name`, `entity_type` (optional), `keywords` (optional), `limit` (optional, defaults to 5)
          *   Output: The response from the memory MCP server.
-*   **sequential_thinking_tool:** A tool that uses the sequential thinking MCP server to help with complex tasks.
+*   **sequential_thinking_tool:** Uses the sequential thinking MCP server.
     *   Arguments: `thought`, `nextThoughtNeeded`, `thoughtNumber`, `totalThoughts`, `isRevision`, `revisesThought`, `branchFromThought`, `branchId`, `needsMoreThoughts`
     *   Output: The response from the sequentialthinking MCP server.
-*   **file_management:** A tool that allows users to create, read, write, and delete files and directories.
-    *   **create_file:** Creates a new file with the specified content.
+*   **file_management:** Manages files and directories.
+    *   **create_file:** Creates a new file.
         *   Arguments: `path`, `content`
         *   Output: `File '{path}' created`
-    *   **read_file:** Reads the content of the file.
+    *   **read_file:** Reads the content of a file.
         *   Arguments: `path`
         *   Output: The content of the file.
-    *   **write_file:** Writes the specified content to the specified file.
+    *   **write_file:** Writes content to a file.
         *   Arguments: `path`, `content`
         *   Output: `File '{path}' written`
-    *   **delete_file:** Deletes the specified file.
+    *   **delete_file:** Deletes a file.
         *   Arguments: `path`
         *   Output: `File '{path}' deleted`
     *   **create_directory:** Creates a new directory.
         *   Arguments: `path`
         *   Output: `Directory '{path}' created`
-    *   **delete_directory:** Deletes the specified directory.
+    *   **delete_directory:** Deletes a directory.
         *   Arguments: `path`
         *   Output: `Directory '{path}' deleted`
-    *   **list_directory:** Lists the contents of the specified directory.
+    *   **list_directory:** Lists the contents of a directory.
         *   Arguments: `path`
         *   Output: A comma-separated list of the files and directories in the specified directory.
     *   **file_exists:** Checks if a file exists.
@@ -99,8 +95,7 @@ The project is organized as follows:
 
 ## Usage
 
-To use the tools, send a JSON request to the MCP server with the following format:
-
+Send a JSON request to the MCP server:
 ```json
 {
     "tool_name": "tool_name",
@@ -110,48 +105,3 @@ To use the tools, send a JSON request to the MCP server with the following forma
     }
 }
 ```
-
-Replace `tool_name` with the name of the tool you want to use, and replace `arg1` and `arg2` with the arguments required by the tool.
-
-## Example
-
-To use the `generate_code` tool, send the following request:
-
-```json
-{
-    "tool_name": "generate_code",
-    "arguments": {
-        "code_type": "class",
-        "name": "MyClass",
-        "language": "python"
-    }
-}
-```
-
-## Installation
-
-To install the project, follow these steps:
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/uncoder-cloud/beyond-mcp.git
-    ```
-2.  Change to the project directory:
-    ```bash
-    cd beyond-mcp
-    ```
-3.  Install the project and its dependencies:
-    ```bash
-    pip install -e .
-    ```
-This will install the project in editable mode, allowing you to make changes to the code and have them reflected immediately.
-
-## Contributing
-
-We welcome contributions to this project! Please follow these guidelines:
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Write clear and concise code with appropriate comments.
-4.  Add unit tests to verify your changes.
-5.  Submit a pull request with a detailed description of your changes.
