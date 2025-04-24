@@ -6,7 +6,7 @@ import importlib.machinery
 def load_tools(tools_dir):
     tools = {}
     for filename in os.listdir(tools_dir):
-        if filename.endswith(".py") and filename != "test_tools.py":
+        if filename.endswith(".py") and filename != "test_tools.py" and filename != "hello_world.py":
             tool_name = filename[:-3]
             tool_path = os.path.join(tools_dir, filename)
             spec = importlib.util.spec_from_file_location(tool_name, tool_path)
@@ -28,6 +28,8 @@ def execute_tool(tool_name, arguments, tools):
             result = execute_sequential_thinking_tool(module, arguments)
         elif tool_name == "file_management":
             result = execute_file_management_tool(module, arguments)
+        elif tool_name == "generate_code":
+            result = module.generate_code(**arguments)
         else:
             command = arguments.pop("command")
             result = getattr(module, command)(**arguments)
