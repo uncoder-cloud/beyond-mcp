@@ -1,0 +1,7 @@
+{
+    "tool_name": "file_management",
+    "arguments": {
+        "command": "read_file",
+        "path": "test.txt"
+    }
+}
