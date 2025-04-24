@@ -133,7 +133,11 @@ This will install the project in editable mode, allowing you to make changes to 
 
 ## Logo
 
-The logo for beyond-mcp could be a stylized brain composed of interconnected dots, representing the interconnectedness of tools and the focus on AI development. The color scheme could use a gradient of blues and greens to convey a sense of intelligence, growth, and innovation. Alternatively, a simpler logo could use a stylized "b" and "m" (for beyond-mcp) formed from dots.
+**Note:** I am unable to create a visual logo directly. However, I can provide a textual description of what the logo could look like.
+
+The logo for beyond-mcp could be a stylized brain composed of interconnected dots, representing the interconnectedness of tools and the focus on AI development. The dots could be different sizes and colors to create a sense of depth and dynamism.
+
+The color scheme could use a gradient of blues and greens to convey a sense of intelligence, growth, and innovation. Alternatively, a simpler logo could use a stylized "b" and "m" (for beyond-mcp) formed from dots. The dots could be colored in a vibrant, modern palette, such as a combination of teal, magenta, and yellow.
 
 ## Contributing
 
