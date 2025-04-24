@@ -1,15 +1,32 @@
-# mcp-project
-# mcp-project
+# beyond-mcp
 
 **Warning: This project is currently under development and may not be stable.**
 
-This is a test MCP (Model Context Protocol) project that provides a set of tools to boost programmer productivity.
+This is a test MCP (Model Context Protocol) project that provides a set of tools to boost programmer productivity, particularly in the realm of AI development.
+
+## Motivation
+
+This project aims to create a centralized platform for managing and executing various tasks related to software development, with a particular focus on AI-related workflows. By leveraging the Model Context Protocol (MCP), we can create a flexible and extensible system that allows developers to easily integrate and utilize different tools and services.
+
+## Code Structure
+
+The project is organized as follows:
+
+*   `mcp_server/mcp_server.py`: This is the main file that implements the MCP server. It handles loading tools, executing requests, and communicating with the MCP client.
+*   `mcp_server/tools/`: This directory contains the individual tools that can be used by the MCP server. Each tool is implemented as a separate Python module.
+*   `mcp_server/tools/analyze_code.py`: A tool that performs static analysis to identify potential errors and code quality issues.
+*   `mcp_server/tools/debug_code.py`: A tool that allows users to simulate debugging code.
+*   `mcp_server/tools/file_management.py`: A tool that allows users to create, read, write, and delete files and directories.
+*   `mcp_server/tools/generate_code.py`: A tool that generates boilerplate code for common tasks.
+*   `mcp_server/tools/memory_tool.py`: A tool that uses the memory MCP server to store and retrieve information.
+*   `mcp_server/tools/sequential_thinking_tool.py`: A tool that uses the sequential thinking MCP server to help with complex tasks.
+*   `mcp_server/tools/task_management.py`: A tool that allows users to create and manage tasks.
+*   `mcp_server/tools/test_tools.py`: A file containing unit tests for the tools.
+*   `request.json`: A sample JSON file that can be used to send requests to the MCP server.
+*   `README.md`: This file, which provides an overview of the project.
 
 ## Available Tools
 
-*   **hello_world:** A simple tool that returns a greeting.
-    *   Arguments: `name`
-    *   Output: `Hello, {name}!`
 *   **generate_code:** A tool that generates boilerplate code for common tasks.
     *   Arguments: `code_type`, `name`
     *   Output: The generated code.
@@ -83,13 +100,24 @@ Replace `tool_name` with the name of the tool you want to use, and replace `arg1
 
 ## Example
 
-To use the `hello_world` tool, send the following request:
+To use the `generate_code` tool, send the following request:
 
 ```json
 {
-    "tool_name": "hello_world",
+    "tool_name": "generate_code",
     "arguments": {
-        "name": "Test User"
+        "code_type": "class",
+        "name": "MyClass"
     }
 }
 ```
+
+## Contributing
+
+We welcome contributions to this project! Please follow these guidelines:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Write clear and concise code with appropriate comments.
+4.  Add unit tests to verify your changes.
+5.  Submit a pull request with a detailed description of your changes.
