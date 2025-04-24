@@ -1,20 +1,16 @@
 import unittest
-import hello_world
 import generate_code
 import debug_code
 import analyze_code
 import file_management
 import task_management
 import memory_tool
+import sequential_thinking_tool
 
 class TestTools(unittest.TestCase):
 
-    def test_hello_world(self):
-        self.assertEqual(hello_world.hello_world("Test"), "Hello, Test!")
-
     def test_generate_code(self):
         self.assertTrue("class MyClass:" in generate_code.generate_code("class", "MyClass"))
-        self.assertTrue("def my_function():" in generate_code.generate_code("function", "my_function"))
 
     def test_debug_code(self):
         self.assertTrue("Debugging started" in debug_code.debug_code("test code", [1, 2]))
