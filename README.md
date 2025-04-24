@@ -4,6 +4,14 @@
 
 This is a test MCP (Model Context Protocol) project that provides a set of tools to boost programmer productivity, particularly in the realm of AI development.
 
+## Logo
+
+**Note:** I am unable to create a visual logo directly. However, I can provide a textual description of what the logo could look like.
+
+The logo for beyond-mcp could be a stylized brain composed of interconnected dots, representing the interconnectedness of tools and the focus on AI development. The dots could be different sizes and colors to create a sense of depth and dynamism.
+
+The color scheme could use a gradient of blues and greens to convey a sense of intelligence, growth, and innovation. Alternatively, a simpler logo could use a stylized "b" and "m" (for beyond-mcp) formed from dots. The dots could be colored in a vibrant, modern palette, such as a combination of teal, magenta, and yellow.
+
 ## Motivation
 
 This project aims to create a centralized platform for managing and executing various tasks related to software development, with a particular focus on AI-related workflows. By leveraging the Model Context Protocol (MCP), we can create a flexible and extensible system that allows developers to easily integrate and utilize different tools and services.
@@ -130,14 +138,6 @@ To install the project, follow these steps:
     pip install -e .
     ```
 This will install the project in editable mode, allowing you to make changes to the code and have them reflected immediately.
-
-## Logo
-
-**Note:** I am unable to create a visual logo directly. However, I can provide a textual description of what the logo could look like.
-
-The logo for beyond-mcp could be a stylized brain composed of interconnected dots, representing the interconnectedness of tools and the focus on AI development. The dots could be different sizes and colors to create a sense of depth and dynamism.
-
-The color scheme could use a gradient of blues and greens to convey a sense of intelligence, growth, and innovation. Alternatively, a simpler logo could use a stylized "b" and "m" (for beyond-mcp) formed from dots. The dots could be colored in a vibrant, modern palette, such as a combination of teal, magenta, and yellow.
 
 ## Contributing
 
