@@ -6,7 +6,7 @@ This is a test MCP (Model Context Protocol) project that provides a set of tools
 
 ## Logo
 
-![Project Logo](https://raw.githubusercontent.com/simonireilly/beyond-mcp/main/logo.png)
+![Project Logo](https://via.placeholder.com/150)
 ## Motivation
 
 This project aims to create a centralized platform for managing and executing various tasks related to software development, with a particular focus on AI-related workflows. By leveraging the Model Context Protocol (MCP), we can create a flexible and extensible system that allows developers to easily integrate and utilize different tools and services.
