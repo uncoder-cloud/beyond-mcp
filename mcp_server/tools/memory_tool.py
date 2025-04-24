@@ -1,4 +1,4 @@
-def memory_tool(action, entity_name, content=None):
+def memory_tool(action, entity_name, content=None, entity_type=None, keywords=None):
     if action == "add":
         # Add a new observation to the entity
         arguments = {
@@ -12,8 +12,13 @@ def memory_tool(action, entity_name, content=None):
         return use_mcp_tool(server_name="memory", tool_name="add_observations", arguments=arguments)
     elif action == "get":
         # Search for the entity and return its observations
+        query = entity_name
+        if entity_type:
+            query += f" type:{entity_type}"
+        if keywords:
+            query += f" keywords:{keywords}"
         arguments = {
-            "query": entity_name
+            "query": query
         }
         return use_mcp_tool(server_name="memory", tool_name="search_nodes", arguments=arguments)
     else:

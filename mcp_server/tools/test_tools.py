@@ -5,6 +5,7 @@ import debug_code
 import analyze_code
 import file_management
 import task_management
+import memory_tool
 
 class TestTools(unittest.TestCase):
 
@@ -55,6 +56,11 @@ class TestTools(unittest.TestCase):
         self.assertTrue("Test Task" in task_management.list_tasks())
         task_management.update_task_status("Test Task", "closed")
         self.assertTrue("(closed)" in task_management.list_tasks())
+
+    def test_memory_tool(self):
+        self.assertTrue("MCP Tool: add_observations" in memory_tool.memory_tool("add", "test_entity", "test content"))
+        self.assertTrue("MCP Tool: search_nodes" in memory_tool.memory_tool("get", "test_entity"))
+        self.assertTrue("MCP Tool: search_nodes" in memory_tool.memory_tool("get", "test_entity", entity_type="test_type", keywords="test"))
 
 if __name__ == '__main__':
     unittest.main()
