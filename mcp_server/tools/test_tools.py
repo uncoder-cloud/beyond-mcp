@@ -30,6 +30,26 @@ class TestTools(unittest.TestCase):
         file_management.delete_file("test_file.txt")
         self.assertTrue("No such file" in file_management.read_file("test_file.txt"))
 
+    def test_create_directory(self):
+        self.assertEqual(file_management.create_directory("test_dir"), "Directory 'test_dir' created")
+        self.assertTrue("test_dir" in file_management.list_directory("."))
+        file_management.delete_directory("test_dir")
+        self.assertFalse("test_dir" in file_management.list_directory("."))
+
+    def test_delete_directory(self):
+        file_management.create_directory("test_dir")
+        self.assertEqual(file_management.delete_directory("test_dir"), "Directory 'test_dir' deleted")
+        self.assertFalse("test_dir" in file_management.list_directory("."))
+
+    def test_list_directory(self):
+        file_management.create_file("test_file.txt", "test content")
+        file_management.create_directory("test_dir")
+        contents = file_management.list_directory(".")
+        self.assertTrue("test_file.txt" in contents)
+        self.assertTrue("test_dir" in contents)
+        file_management.delete_file("test_file.txt")
+        file_management.delete_directory("test_dir")
+
     def test_task_management(self):
         task_management.create_task("Test Task", "Test Description")
         self.assertTrue("Test Task" in task_management.list_tasks())
