@@ -113,6 +113,27 @@ To use the `generate_code` tool, send the following request:
 }
 ```
 
+## Installation
+
+To install the project, follow these steps:
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/uncoder-cloud/beyond-mcp.git
+    ```
+2.  Change to the project directory:
+    ```bash
+    cd beyond-mcp
+    ```
+3.  Install the dependencies:
+    ```bash
+    pip install -e .
+    ```
+
+## Logo
+
+The logo for beyond-mcp could be a stylized brain composed of interconnected dots, representing the interconnectedness of tools and the focus on AI development. The color scheme could use a gradient of blues and greens to convey a sense of intelligence, growth, and innovation. Alternatively, a simpler logo could use a stylized "b" and "m" (for beyond-mcp) formed from dots.
+
 ## Contributing
 
 We welcome contributions to this project! Please follow these guidelines:
