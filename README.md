@@ -6,7 +6,36 @@ This is a test MCP (Model Context Protocol) project that provides a set of tools
 
 ## Logo
 
-[Logo will be added in a future update]
+**Note:** I am unable to create a visual logo directly. However, I can provide a textual representation of what the logo could look like using dots.
+
+Here's a more detailed example of how the logo could be drawn using dots to represent a stylized brain:
+
+```
+                                      .....
+                                  .           .
+                                 .             .
+                                .               .
+                               .                 .
+                              .                   .
+                             .                     .
+                            .                       .
+                           .                         .
+                          .                           .
+                          .                           .
+                           .                         .
+                            .                       .
+                             .                     .
+                              .                   .
+                               .                 .
+                                .               .
+                                 .             .
+                                  .           .
+                                      .....
+```
+
+This is a more complex example, and the actual logo could be even more detailed. The dots could be different sizes and colors to create a sense of depth and dynamism.
+
+The color scheme could use a gradient of blues and greens to convey a sense of intelligence, growth, and innovation. Alternatively, a simpler logo could use a stylized "b" and "m" (for beyond-mcp) formed from dots. The dots could be colored in a vibrant, modern palette, such as a combination of teal, magenta, and yellow.
 
 ## Motivation
 
