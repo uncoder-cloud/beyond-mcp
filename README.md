@@ -2,11 +2,12 @@
 
 **Warning: This project is currently under development and may not be stable.**
 
-This is a test MCP (Model Context Protocol) project that provides a set of tools to boost programmer productivity, particularly in the realm of AI development.
+This project, beyond-mcp, is a cutting-edge development platform leveraging the Model Context Protocol (MCP) to supercharge programmer productivity, especially in the rapidly evolving field of Artificial Intelligence. It provides a centralized hub for managing and executing a diverse range of development tasks, streamlining workflows and fostering seamless integration of various tools and services.
 
 ## Logo
 
 ![Project Logo](https://via.placeholder.com/150)
+
 ## Motivation
 
 This project aims to create a centralized platform for managing and executing various tasks related to software development, with a particular focus on AI-related workflows. By leveraging the Model Context Protocol (MCP), we can create a flexible and extensible system that allows developers to easily integrate and utilize different tools and services.
@@ -26,12 +27,14 @@ The project is organized as follows:
 *   `mcp_server/tools/task_management.py`: A tool that allows users to create and manage tasks.
 *   `mcp_server/tools/test_tools.py`: A file containing unit tests for the tools.
 *   `request.json`: A sample JSON file that can be used to send requests to the MCP server.
+*   `setup.py`: A file used to package and distribute the project.
+*   `requirements.txt`: A file listing the project's dependencies.
 *   `README.md`: This file, which provides an overview of the project.
 
 ## Available Tools
 
 *   **generate_code:** A tool that generates boilerplate code for common tasks.
-    *   Arguments: `code_type`, `name`, `language` (optional, defaults to "python"), `description` (optional)
+    *   Arguments: `code_type`, `name`, `language` (optional, defaults to "python")
     *   Output: The generated code.
 *   **debug_code:** A tool that allows users to simulate debugging code.
     *   Arguments: `code`, `breakpoints` (optional, defaults to empty list)
@@ -107,3 +110,48 @@ To use the tools, send a JSON request to the MCP server with the following forma
     }
 }
 ```
+
+Replace `tool_name` with the name of the tool you want to use, and replace `arg1` and `arg2` with the arguments required by the tool.
+
+## Example
+
+To use the `generate_code` tool, send the following request:
+
+```json
+{
+    "tool_name": "generate_code",
+    "arguments": {
+        "code_type": "class",
+        "name": "MyClass",
+        "language": "python"
+    }
+}
+```
+
+## Installation
+
+To install the project, follow these steps:
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/uncoder-cloud/beyond-mcp.git
+    ```
+2.  Change to the project directory:
+    ```bash
+    cd beyond-mcp
+    ```
+3.  Install the project and its dependencies:
+    ```bash
+    pip install -e .
+    ```
+This will install the project in editable mode, allowing you to make changes to the code and have them reflected immediately.
+
+## Contributing
+
+We welcome contributions to this project! Please follow these guidelines:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Write clear and concise code with appropriate comments.
+4.  Add unit tests to verify your changes.
+5.  Submit a pull request with a detailed description of your changes.
