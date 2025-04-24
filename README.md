@@ -125,10 +125,11 @@ To install the project, follow these steps:
     ```bash
     cd beyond-mcp
     ```
-3.  Install the dependencies:
+3.  Install the project and its dependencies:
     ```bash
     pip install -e .
     ```
+This will install the project in editable mode, allowing you to make changes to the code and have them reflected immediately.
 
 ## Logo
 
