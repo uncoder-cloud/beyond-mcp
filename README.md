@@ -17,7 +17,7 @@ The project is organized as follows:
 *   `mcp_server/tools/analyze_code.py`: A tool that performs static analysis to identify potential errors and code quality issues.
 *   `mcp_server/tools/debug_code.py`: A tool that allows users to simulate debugging code.
 *   `mcp_server/tools/file_management.py`: A tool that allows users to create, read, write, and delete files and directories.
-*   `mcp_server/tools/generate_code.py`: A tool that generates boilerplate code for common tasks.
+*   `mcp_server/tools/generate_code.py`: A tool that generates boilerplate code for common tasks in various programming languages.
 *   `mcp_server/tools/memory_tool.py`: A tool that uses the memory MCP server to store and retrieve information.
 *   `mcp_server/tools/sequential_thinking_tool.py`: A tool that uses the sequential thinking MCP server to help with complex tasks.
 *   `mcp_server/tools/task_management.py`: A tool that allows users to create and manage tasks.
@@ -28,7 +28,7 @@ The project is organized as follows:
 ## Available Tools
 
 *   **generate_code:** A tool that generates boilerplate code for common tasks.
-    *   Arguments: `code_type`, `name`
+    *   Arguments: `code_type`, `name`, `language` (optional, defaults to "python")
     *   Output: The generated code.
 *   **debug_code:** A tool that allows users to simulate debugging code.
     *   Arguments: `code`, `breakpoints`
@@ -107,7 +107,8 @@ To use the `generate_code` tool, send the following request:
     "tool_name": "generate_code",
     "arguments": {
         "code_type": "class",
-        "name": "MyClass"
+        "name": "MyClass",
+        "language": "python"
     }
 }
 ```
