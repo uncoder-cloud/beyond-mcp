@@ -6,7 +6,7 @@ This project, beyond-mcp, leverages the Model Context Protocol (MCP) to enhance 
 
 ## Logo
 
-![Project Logo](logo.jpg)
+![Project Logo](/logo.jpg)
 
 ## Motivation
 
