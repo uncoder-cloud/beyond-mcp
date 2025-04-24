@@ -6,11 +6,11 @@ This project, beyond-mcp, is a cutting-edge development platform leveraging the 
 
 ## Logo
 
-![Project Logo](https://via.placeholder.com/150)
+![Project Logo](logo.jpg)
 
 ## Motivation
 
-This project aims to create a centralized platform for managing and executing various tasks related to software development, with a particular focus on AI-related workflows. By leveraging the Model Context Protocol (MCP), we can create a flexible and extensible system that allows developers to easily integrate and utilize different tools and services.
+This project provides a development platform that leverages the Model Context Protocol (MCP) to enhance programmer productivity, especially in AI. It offers a centralized hub for managing and executing development tasks, streamlining workflows, and integrating various tools and services.
 
 ## Code Structure
 
