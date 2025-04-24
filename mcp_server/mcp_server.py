@@ -24,6 +24,7 @@ def execute_tool(tool_name, arguments, tools):
         if tool_name == "memory_tool":
             result = execute_memory_tool(module, arguments)
         elif tool_name == "sequential_thinking_tool":
+            arguments["entity_name"] = "thinking_process"  # Add entity_name argument
             result = execute_sequential_thinking_tool(module, arguments)
         elif tool_name == "file_management":
             result = execute_file_management_tool(module, arguments)
@@ -42,7 +43,10 @@ def execute_sequential_thinking_tool(module, arguments):
 
 def execute_file_management_tool(module, arguments):
     command = arguments.pop("command")
-    return getattr(module, command)(**arguments)
+    try:
+        return getattr(module, command)(**arguments)
+    except Exception as e:
+        return str(e)
 
 def handle_request(request, tools):
     tool_name = request["tool_name"]
